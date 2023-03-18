@@ -1,0 +1,125 @@
+Speaker	Full name	Age BHC1	Age BHC2	Year of birth	Gender	Family	Generation	SES	Returning 	Languages available	F BHC1	F BHC2	N BHC1	N BHC2							
+001	Merten Bakker	84		1898	Male	1	1	High education	0	F+N	1	0	1	0							
+002	D Bakker	49		1933	Male	1	2	High education	0	F+N	1	0	1	0							
+003	Roelof Bakker	14		1968	Male	1	3	High education	0	F+N	1	0	1	0							
+004	O van Gorkum	72		1910	Male	2	1	High education	0	F+N	1	0	1	0							
+005	Doede van Gorkum	45	80	1937	Male	2	2	High education	1	F+N	1	1	1	1							
+006	Oebele van Gorkum	20	55	1962	Male	2	3	High education	1	F+N	1	1	1	1							
+007	S van der Meer	85		1897	Male	3	1	High education	0	F+N	1	0	1	0							
+008	F van der Meer	56		1926	Male	3	2	High education	0	F+N	1	0	1	0							
+009	E van der Meer	22		1960	Male	3	3	High education	0	F+N	1	0	1	0							
+010	G Boorsma	81		1902	Male	4	1	High education	0	F+N	1	0	1	0							
+011	J Boorsma	51		1932	Male	4	2	High education	0	F+N	1	0	1	0							
+012	G Boorsma	21		1962	Male	4	3	High education	0	F+N	1	0	1	0							
+013		45		1938	Male	5	2	High education	0	F+N	1	0	1	0							
+014	Evert	15		1969	Male	5	3	High education	0	F+N	1	0	1	0							
+015	J de Jong-Hoeneveld	80		1903	Female	6	1	High education	0	F+N	1	0	1	0							
+016	A Kleiterp-de Jonge	50		1933	Female	6	2	High education	0	F+N	1	0	1	0							
+017	J Kleiterp	24		1959	Female	6	3	High education	0	F+N	1	0	1	0							
+018	Thomas Engelsma	82		1900	Male	7	1	Low education	0	F+N	1	0	1	0							
+019	E Engelsma	56		1926	Male	7	2	Low education	0	F+N	1	0	1	0							
+020	Thomas Engelsma	31	66	1952	Male	7	3	Low education	1	F+N	0	1	1	1							
+021	K de Jong	66		1917	Male	8	1	Low education	0	F+N	1	0	1	0							
+022	K de Jong	41		1942	Male	8	2	Low education	0	F+N	1	0	1	0							
+023	Tsjalling Spijkstra	76		1907	Male	9	1	Low education	0	F+N	1	0	1	0							
+024	Sjoerd Spijkstra	48	83	1935	Male	9	2	Low education	1	F+N	1	1	1	1							
+025	Joop Spijkstra	25	59	1958	Male	9	3	Low education	1	F+N	1	1	1	1							
+026	J Dijkstra	70		1913	Male	10	1	Low education	0	F+N	1	0	1	0							
+027	H Dijkstra	44		1939	Male	10	2	Low education	0	F+N	1	0	1	0							
+028	J Dijkstra	26		1967	Male	10	3	Low education	0	F+N	1	0	1	0							
+029	S Sixma	82		1901	Male	11	1	Low education	0	F+N	1	0	1	0							
+030	Reinder Sixma	40	75	1943	Male	11	2	Low education	1	F+N	1	1	1	0							
+031	Sipke Sixma	16	50	1967	Male	11	3	Low education	1	F+N	1	1	1	1							
+032	Veldstra	74		1910	Male	12	1	Low education	0	F+N	1	0	1	0							
+033	Veldstra	41		1943	Male	12	2	Low education	0	F+N	1	0	1	0							
+034	Germ/Jan Veldstra	19		1966	Male	12	3	Low education	0	F+N	1	0	1	0							
+035	V de Wal-Attema	73		1909	Female	13	1	Low education	0	F+N	1	0	1	0							
+036	Griet Kleinhuis-Bijlsma	46	81	1936	Female	13	2	Low education	1	F+N	1	1	0	1							
+037	R Kleinhuis	20	55	1962	Female	13	3	Low education	1	F+N	1	1	1	1							
+038	Aafke Liemburg		22	1995	Female	13	4	High education	0	F+N	0	1	0	1							
+039	A de Boer-van der Veen	84		1899	Female	14	1	Low education	0	F+N	1	0	1	0							
+040	T Visser-de Boer	54		1929	Female	14	2	Low education	0	F+N	1	0	1	0							
+041	A Brouwer-Visser	25		1958	Female	14	3	Low education	0	F+N	1	0	1	0							
+042	L Adema-Postma	77		1905	Female	15	1	Low education	0	F+N	1	0	1	0							
+043	G de Vries-Adema	51		1931	Female	15	2	Low education	0	F+N	1	0	1	0							
+044	S de Vries	15		1967	Female	15	3	Low education	0	F+N	1	0	1	0							
+045	S Sijtema-Bijlsma	72		1911	Female	16	1	Low education	0	F+N	1	0	1	0							
+046	P Wobbes-Sijtema	47	81	1936	Female	16	2	Low education	1	F+N	1	1	1	1							
+047	S Wobbes	22	56	1961	Female	16	3	Low education	1	F+N	1	1	1	1							
+048	J de Jong-Wagenaar	72		1911	Female	17	1	Low education	0	F+N	1	0	1	0							
+049	T Leistra-de Jong	37	71	1946	Female	17	2	Low education	1	F+N	1	1	1	1							
+050	C Leistra	19	53	1964	Female	17	3	Low education	1	F+N	1	1	1	1							
+051			21	1996	Female	17	4	High education	0	F+N	0	1	0	1							
+052	J Smit-Walda	84		1899	Female	18	1	Low education	0	F+N	1	0	1	0							
+053	H Pijlman-Smit	57		1926	Female	18	2	Low education	0	F+N	1	0	1	0							
+054	G van Steen-Pijlman	31	65	1952	Female	18	3	Low education	1	F+N	1	1	1	1							
+055			41	1976	Female	18	4	High education	0	F+N	0	1	0	1							
+056	H Akkerman	82		1900	Male	19	1	Farmer	0	F+N	1	0	1	0							
+057	R Akkerman	50		1932	Male	19	2	Farmer	0	F+N	1	0	1	0							
+058	H Akkerman	23		1959	Male	19	3	Farmer	0	F+N	1	0	1	0							
+059	D Castelein	72		1910	Male	20	1	Farmer	0	F+N	1	0	1	0							
+060	D Castelein	43		1939	Male	20	2	Farmer	0	F+N	1	0	1	0							
+061	S Castelein	17		1965	Male	20	3	Farmer	0	F+N	1	0	1	0							
+062	B Santema	75		1907	Male	21	1	Farmer	0	F+N	1	0	1	0							
+063	Yde Santema	46	82	1936	Male	21	2	Farmer	1	F+N	1	1	1	1							
+064	Sjerk Santema	23	58	1959	Male	21	3	Farmer	1	F+N	1	1	1	1							
+065	C Wartena	80		1902	Male	22	1	Farmer	0	F+N	1	0	1	0							
+066	R Wartena	43		1939	Male	22a	2	Farmer	0	F+N	1	0	1	0							
+067	C Wartena	17		1965	Male	22a	3	Farmer	0	F+N	1	0	1	0							
+068	Tsjalling Wartena	50		1933	Male	22b	2	Farmer	0	F+N	1	0	1	0							
+069	C Wartena	18		1965	Male	22b	3	Farmer	0	F+N	1	0	1	0							
+070	T Wartena	81		1901	Male	23	1	Farmer	0	F+N	1	0	1	0							
+071	Wybren Wartena	46	81	1936	Male	23	2	Farmer	1	F+N	1	1	1	1							
+072	Tsjerk Wartena	17	53	1965	Male	23	3	Farmer	1	F+N	1	1	1	1							
+073	Wybren Wartena		22	1996	Male	23	4	High education	0	F	0	1	0	0							
+074	R Dijkstra-Jonker	80		1903	Female	24	1	Farmer	0	F+N	1	0	1	0							
+075	W Sijtema-Dijkstra	51	85	1932	Female	24	2	Farmer	1	F+N	1	1	1	1							
+076	R Sijtema	21	55	1962	Female	24	3	Farmer (high education)	1	F+N	1	1	1	1							
+077	J Hooghiemster-Poelstra	69		1914	Female	25	1	Farmer	0	F+N	1	0	1	0							
+078	A Gerbens-Hooghiemster	39		1944	Female	25	2	Farmer	0	F+N	1	0	1	0							
+079	J Gerbens	15		1968	Female	25	3	Farmer	0	F+N	1	0	1	0							
+080	Tsj Swierstra-de Boer	69		1914	Female	26	1	Farmer	0	F+N	1	0	1	0							
+081	A Wartena-Swierstra	47	81	1936	Female	26	2	Farmer	1	F+N	1	1	1	1							
+082	Tsj Wartena	20	54	1963	Female	26	3	Farmer	1	F+N	1	1	1	1							
+083	Y Zwaagstra-de Vries	82		1901	Female	27	1	Farmer	0	F+N	1	0	1	0							
+084	A de Kam-Zwaagstra	57		1926	Female	27	2	Farmer	0	F+N	1	0	1	0							
+085	E de Kam	19	53	1964	Female	27	3	Farmer	1	F+N	1	1	1	1							
+086	B Nauta-Wiersma	82		1901	Female	28	1	Farmer	0	F+N	1	0	1	0							
+087	S Kalsbeek-Nauta	51		1932	Female	28	2	Farmer	0	F+N	1	0	1	0							
+088	B Kalsbeek	22		1961	Female	28	3	Farmer	0	F+N	1	0	1	0							
+089	Gaitske Boekema		63	1954	Female	29	3	High education	0	F+N	0	1	0	1							
+090	Baukje de Wal		37	1980	Female	29	4	High education	0	F+N	0	1	0	1							
+091	Rennie Kooiker-Siegers		88	1929	Female	30	2	Low education	0	F+N	0	1	0	1							
+092	Lutske Kooiker		63	1954	Female	30	3	Low education	0	F+N	0	1	0	1							
+093	Welmoed Wiersma-Merlijn		31	1986	Female	30	4	High education	0	F+N	0	1	0	1							
+094			76	1942	Female	31	2	High education	0	F+N	0	1	0	1							
+095			50	1967	Female	31	3	Low education	0	F+N	0	1	0	1							
+096			18	2000	Female	31	4	High education	0	F+N	0	1	0	1							
+097			76	1942	Female	32	2	Low education	0	F+N	0	1	0	1							
+098			50	1968	Female	32	3	Low education	0	F+N	0	1	0	1							
+099			20	1998	Female	32	4	High education	0	F+N	0	1	0	1							
+100			70	1948	Female	33	2	Low education	0	F+N	0	1	0	1							
+101			46	1972	Female	33	3	Low education	0	F+N	0	1	0	1							
+102	Jildou		18	2000	Female	33	4	Low education	0	F+N	0	1	0	1							
+103			72	1946	Male	34	2	Low education	0	F+N	0	1	0	1							
+104			43	1975	Male	34	3	Low education	0	F+N	0	1	0	1							
+105			19	2000	Male	34	4	Low education	0	F+N	0	1	0	1							
+106			79	1939	Male	35	2	Low education	0	F+N	0	1	0	1							
+107			52	1966	Male	35	3	High education	0	F	0	1	0	0							
+108			17	2001	Male	35	4	Low education	0	F	0	1	0	0							
+109			73	1944	Female	36	2	Low education	0	F	0	1	0	0							
+110			46	1972	Female	36	3	Low education	0	F	0	1	0	0							
+111			21	1996	Female	36	4	Low education	0	F	0	1	0	0							
+112			52	1966	Male	37	3	High education	0	F	0	1	0	0							
+113			18	2000	Male	37	4	High education	0	F	0	1	0	0							
+																					
+																					
+																					
+																					
+																					
+																					
+																					
+																					
+																					
+																					
+																					
