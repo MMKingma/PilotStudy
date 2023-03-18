@@ -1,0 +1,219 @@
+## Pilot study analyses MMK
+
+In this markdown file, the analyses for the pilot study by Marco Martijn Kingma on diphthongisation of [i:] in Frisian are detailed.
+
+For questions, contact me at: mkingma@fryske-akademy.nl 
+
+Latest amends were made on: 19/03/2023
+
+#### RQ1: effect of birth year on diphthongisation
+
+##### Load in data:
+```{r}
+table1 <- read.delim ("data/RQ1AgeData.txt", stringsAsFactors=TRUE)
+head(table1)
+tail(table1)
+```
+
+Wide to long, as well as natural log transformation on F1 data and adding a birth year centered and position (i.e, measurement point 25%, 50% or 75%) centered:
+```{r}
+library(tidyr)
+table2 <- reshape(table1, varying = list(c("F1A","F1B","F1C"), c("F2A","F2B","F2C"), c("F3A","F3B","F3C")), direction = "long", v.names = c("F1","F2", "F3"))
+table2$logf1 <- log(table2$F1) # natural log transformation on F1 data
+table2$position <- rep(c(1,2,3), each=640) # position = measurement point 
+table2$byc <- table2$birthyear-1945 # birth year centered, 1945 is both the mean and median birth year
+table2$psc <- table2$position-2 # position centered around the middle measurement point (25% -1; 50% 0; 75% +1)
+head(table2)
+tail(table2)
+```
+Though our table2 looks quite convoluted in R, I also checked by writing table 2 to a csv file (see below, commented out). The transformation of our formant data to long format seems to have gone well.
+
+```{r}
+# write.csv(table2, "data/CheckingLongTable.csv", row.names=FALSE) # to test whether long transformation worked well
+```
+
+##### Analysis 1: Effect of birth year on diphthongisation of [i:]
+
+So we build our model now. Our variables and effects are:  
+DV = logf1  
+Random effects:  
+speaker  
+Fixed effects:
+birthyear (between speaker)  
+position (within speaker) 
+
+The interaction between birthyear and position answers our RQ.
+
+```{r}
+library(lme4)
+library(lmerTest)
+
+model.age <- lmerTest::lmer(logf1~byc*psc+(psc|speaker), data=table2)
+summary(model.age) # leaving out effect of word (item), better fit to our RQ (interaction of byc:psc)
+```
+
+```{r}
+options (width = 200)   # make the rows 200 characters long
+fixef <- lme4::fixef (model.age)
+cbind (names (fixef),
+       lmerTest::contest (model.age,
+                          diag (length (fixef)), joint=FALSE))
+```
+
+Also checking whether the residuals show anything weird:
+
+```{r}
+ranefmodel.age<-ranef(model.age)
+hist(ranefmodel.age[1]$speaker$psc)
+qqnorm(resid(model.age))
+qqline(resid(model.age))
+```
+
+##### Analysis 2: diphthongisastion index (between-speaker variation)
+
+We obtain 79 random slopes for position by speaker (i.e., one for each speaker):
+
+```{r}
+ranef.position <- ranef(model.age) [1] $ speaker $ psc
+ranef.position
+ranef(model.age)
+```
+
+We obtain 1 fixed effect for position (it is also visible in the Summary):
+
+```{r}
+fixef.position <- fixef (model.age) ["psc"]
+fixef.position
+```
+
+We obtain 79 effects for age (again one per speaker):
+
+```{r}
+fixef.age.position <- fixef (model.age) ["byc:psc"]
+fixef.age.position
+```
+
+```{r}
+speaker.table <- aggregate (birthyear ~ speaker, data = table1, FUN=mean)
+speaker.table
+```
+
+```{r}
+ef.age.position <- fixef.age.position * (speaker.table $ birthyear - 1945)
+ef.age.position
+```
+
+Add up the three effects and do times 2 to obtain difference between position 1 and 3:
+
+```{r}
+Diphthongisation_index <- 2 * (fixef.position + ranef.position + ef.age.position)
+Diphthongisation_index
+```
+
+```{r}
+histogram1 <- hist (Diphthongisation_index, plot=FALSE)
+plot(histogram1, xlab = "Diphthongisation index", ylab = "Frequency",
+     main = "",)
+```
+
+And look at the birth years of the speakers with a positive index: only young speakers!
+```{r}
+speaker.table.extended <- cbind(speaker.table, Diphthongisation_index)
+speaker.table.extended
+```
+
+##### Analysis 3: difference between speech styles
+
+Our variables and effects are:  
+DV = logf1  
+Random effects:  
+speaker  
+Fixed effects:
+speech style (binary, 2 levels, between speaker)
+Position (within-speaker)
+
+We first reshape the data:
+```{r}
+table.style <- read.delim ("data/RQ3style.txt", stringsAsFactors=TRUE)
+table.style <- reshape(table.style, varying = list(c("F1A","F1B","F1C"), c("F2A","F2B","F2C"), c("F3A","F3B","F3C")), direction = "long", v.names = c("F1","F2", "F3"))
+table.style$logf1 <- log(table.style$F1) # natural log transformation on F1 data
+table.style$position <- rep(c(1,2,3), each=296) # position = measurement point 
+table.style$psc <- table.style$position-2 # position centered around the middle measurement point (25% -1; 50% 0; 75% +1)
+head(table.style)
+```
+
+So, we set our orthogonal contrasts around zero for speech style and check the contrasts:
+```{r}
+contrast <- cbind (c(-1/2, +1/2))
+colnames (contrast) <- c("-read+spon") # -0.5 read speech, +0.5 spontaneous speech
+contrasts (table.style$style) <- contrast
+contrasts(table.style$style)
+```
+
+And we run our model:
+```{r}
+model.style <- lmerTest::lmer(logf1~style*psc+(psc|speaker), data=table.style)
+summary(model.style)
+```
+
+```{r}
+options (width = 200)   # make the rows 200 characters long
+fixef <- lme4::fixef (model.style)
+cbind (names (fixef),
+       lmerTest::contest (model.style,
+                          diag (length (fixef)), joint=FALSE))
+```
+
+And we see if the difference in duration between styles is significant (for our discussion):
+```{r}
+model.style.dur <- lmerTest::lmer(duration~style+(1|speaker), data=table.style)
+summary(model.style.dur)
+options (width = 200)   # make the rows 200 characters long
+fixef <- lme4::fixef (model.style.dur)
+cbind (names (fixef),
+       lmerTest::contest (model.style.dur,
+                          diag (length (fixef)), joint=FALSE))
+```
+
+##### Analysis 4: Change in real time
+
+Our variables and effects are:  
+DV: logf1  
+random effects:  
+speaker  
+Fixed effects:  
+position (centred around position 2)  
+timepoint (binary, 2 levels: BHC1 or BHC2)  
+
+We load in and transform our new data:
+
+```{r}
+table.realtime <- read.delim ("data/RQ4returners.txt", stringsAsFactors=TRUE)
+table.realtime <- reshape(table.realtime, varying = list(c("F1A","F1B","F1C"), c("F2A","F2B","F2C"), c("F3A","F3B","F3C")), direction = "long", v.names = c("F1","F2", "F3"))
+table.realtime$logf1 <- log(table.realtime$F1) # natural log transformation on F1 data
+table.realtime$position <- rep(c(1,2,3), each=394) # position = measurement point 
+table.realtime$psc <- table.realtime$position-2 # position centered around the middle measurement point (25% -1; 50% 0; 75% +1)
+head(table.realtime) # I have no idea where the NA came from or how to fix it, but it seems to not hinder our analysis
+```
+
+Set our contrast and check them:
+```{r}
+contrast <- cbind (c(-1/2, +1/2))
+colnames (contrast) <- c("-BHC1+BHC2") # -0.5 BCH1, +0.5 BHC2
+contrasts (table.realtime$moment) <- contrast
+contrasts(table.realtime$moment)
+```
+
+And run our model:
+```{r}
+realtimemodel <- lmer(logf1 ~ moment * psc + (moment + psc|speaker), data=table.realtime)
+summary(realtimemodel)
+options (width = 200)   # make the rows 200 characters long
+fixef <- lme4::fixef (realtimemodel)
+cbind (names (fixef),
+       lmerTest::contest (realtimemodel,
+                          diag (length (fixef)), joint=FALSE))
+```
+
+
+
